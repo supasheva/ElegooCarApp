@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/device_control_activity"
+  tools:context="com.supasheva.bluetoothcarkwadwo.DeviceControlActivity"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Autonomous state"
+    />
+  <Space
+    android:layout_height="20dp"
+    android:layout_width="wrap_content"/>
+
+  <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Forward"
+    android:id="@+id/forwardBtn"
+    />
+
+  <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/leftBtn"
+      android:text="Left"
+      android:layout_weight="1"
+      />
+
+    <Button
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/stopBtn"
+      android:text="Stop"
+      android:layout_weight="1"
+      />
+
+
+    <Button
+      android:id="@+id/rightBtn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Right"
+      android:layout_weight="1"
+      />
+  </LinearLayout>
+
+  <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Back"
+    android:id="@+id/backBtn"
+    ></Button>
+
+  <View
+    android:layout_width="fill_parent"
+    android:layout_height="2dp"
+    android:background="#c0c0c0"/>
+
+
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="horizontal">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/label_device_address"
+      android:textSize="18sp" />
+
+    <Space
+      android:layout_width="5dp"
+      android:layout_height="wrap_content" />
+
+    <TextView
+      android:id="@+id/device_address"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="18sp" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="horizontal">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/label_state"
+      android:textSize="18sp" />
+
+    <Space
+      android:layout_width="5dp"
+      android:layout_height="wrap_content" />
+
+    <TextView
+      android:id="@+id/connection_state"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/disconnected"
+      android:textSize="18sp" />
+  </LinearLayout>
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="horizontal">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/label_data"
+      android:textSize="18sp" />
+
+    <Space
+      android:layout_width="5dp"
+      android:layout_height="wrap_content" />
+
+    <TextView
+      android:id="@+id/isSerial"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/is_serial"
+      android:textSize="18sp" />
+
+  </LinearLayout>
+
+
+
+
+
+</LinearLayout>
