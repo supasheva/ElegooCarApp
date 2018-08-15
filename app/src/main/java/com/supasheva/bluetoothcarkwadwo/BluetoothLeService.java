@@ -17,6 +17,7 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.UUID;
 
@@ -96,6 +97,15 @@ public class BluetoothLeService extends Service {
     public void onCharacteristicChanged(BluetoothGatt gatt,
                                         BluetoothGattCharacteristic characteristic) {
       broadcastUpdate(ACTION_DATA_AVAILABLE, characteristic);
+      //*TODO: *//
+        byte[] b = characteristic.getValue();
+        try {
+            String val = new String(b,"UTF-8");
+            Log.i("charactersitic recieved",val );
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
     }
   };
 
